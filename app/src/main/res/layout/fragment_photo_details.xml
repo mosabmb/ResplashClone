@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.PhotoDetailsFragment">
+
+    <ImageView
+        android:id="@+id/im_photo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_user_profile_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        tools:srcCompat="@tools:sample/avatars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_photo" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Username"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_profile_image"
+        app:layout_constraintStart_toEndOf="@+id/iv_user_profile_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_user_profile_image" />
+
+
+    <ImageView
+        android:id="@+id/iv_bookmark"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_bookmark_border_24"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_user_profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_user_profile_image" />
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_download_24"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_favorite"
+        app:layout_constraintEnd_toStartOf="@+id/iv_favorite"
+        app:layout_constraintTop_toTopOf="@+id/iv_favorite" />
+
+    <ImageView
+        android:id="@+id/iv_favorite"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_baseline_favorite_border_24"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bookmark"
+        app:layout_constraintEnd_toStartOf="@+id/iv_bookmark"
+        app:layout_constraintTop_toTopOf="@+id/iv_bookmark" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="#c0c0c0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_user_profile_image" />
+
+    <TextView
+        android:id="@+id/tv_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tv_camera_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_camera"
+        app:layout_constraintTop_toBottomOf="@+id/tv_camera" />
+
+    <TextView
+        android:id="@+id/tv_focal_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_camera_type" />
+
+    <TextView
+        android:id="@+id/tv_focal_length_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_focal_length"
+        app:layout_constraintTop_toBottomOf="@+id/tv_focal_length" />
+
+    <TextView
+        android:id="@+id/tv_iso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_focal_length_value" />
+
+    <TextView
+        android:id="@+id/tv_iso_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_iso"
+        app:layout_constraintTop_toBottomOf="@+id/tv_iso" />
+
+    <TextView
+        android:id="@+id/tv_aperture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_camera"
+        app:layout_constraintTop_toTopOf="@+id/tv_camera" />
+
+    <TextView
+        android:id="@+id/tv_aperture_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_aperture"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aperture" />
+
+    <TextView
+        android:id="@+id/tv_shutter_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_aperture"
+        app:layout_constraintTop_toTopOf="@+id/tv_focal_length" />
+
+    <TextView
+        android:id="@+id/tv_shutter_speed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_shutter_speed"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shutter_speed" />
+
+    <TextView
+        android:id="@+id/tv_dimensions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_dimensions_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dimensions_value" />
+
+    <TextView
+        android:id="@+id/tv_dimensions_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tv_shutter_speed_value"
+        app:layout_constraintTop_toTopOf="@+id/tv_iso" />
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="#c0c0c0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_iso_type" />
+
+    <TextView
+        android:id="@+id/tv_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/divider_2"
+        app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+    <TextView
+        android:id="@+id/tv_views_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_views"
+        app:layout_constraintStart_toStartOf="@+id/tv_views"
+        app:layout_constraintTop_toBottomOf="@+id/tv_views" />
+
+    <TextView
+        android:id="@+id/tv_downloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/divider_2"
+        app:layout_constraintStart_toStartOf="@+id/divider_2"
+        app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+    <TextView
+        android:id="@+id/tv_downloads_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_downloads"
+        app:layout_constraintStart_toStartOf="@+id/tv_downloads"
+        app:layout_constraintTop_toBottomOf="@+id/tv_downloads" />
+
+    <TextView
+        android:id="@+id/tv_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/divider_2"
+        app:layout_constraintTop_toTopOf="@+id/tv_downloads" />
+
+    <TextView
+        android:id="@+id/tv_likes_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_likes"
+        app:layout_constraintStart_toStartOf="@+id/tv_likes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_likes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

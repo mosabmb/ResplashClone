@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.mosabmb.resplashclone.ui.fragments.MainFragment"
+        android:label="Fragment Main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_collectionPhotosFragment"
+            app:destination="@id/collectionPhotosFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchPhotosFragment"
+            app:destination="@id/searchPhotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoDetailsFragment"
+        android:name="com.mosabmb.resplashclone.ui.fragments.PhotoDetailsFragment"
+        android:label="Fragment Unsplash Photo Details"
+        tools:layout="@layout/fragment_photo_details" >
+        <action
+            android:id="@+id/action_photoDetailsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <argument
+            android:name="photo"
+            app:argType="com.mosabmb.resplashclone.models.UnsplashPhoto.UnsplashPhoto" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/collectionPhotosFragment"
+        android:name="com.mosabmb.resplashclone.ui.fragments.CollectionPhotosFragment"
+        android:label="Fragment Unsplash Collection Photos"
+        tools:layout="@layout/fragment_collection_photos" >
+        <action
+            android:id="@+id/action_collectionPhotosFragment_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment" />
+        <argument
+            android:name="collection"
+            app:argType="com.mosabmb.resplashclone.models.UnsplashCollection.UnsplashCollection" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.mosabmb.resplashclone.ui.fragments.UserProfileFragment"
+        android:label="Fragment User Profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <argument
+            android:name="user"
+            app:argType="com.mosabmb.resplashclone.models.UnsplashPhoto.User" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchPhotosFragment"
+        android:name="com.mosabmb.resplashclone.ui.fragments.SearchPhotosFragment"
+        android:label="Fragment Search Photos"
+        tools:layout="@layout/fragment_search_photos" >
+        <action
+            android:id="@+id/action_searchPhotosFragment_to_photoDetailsFragment"
+            app:destination="@id/photoDetailsFragment" />
+    </fragment>
+
+
+</navigation>
